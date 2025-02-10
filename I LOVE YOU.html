@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8e1f4;
+            color: #8b2d94;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 1.2em;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes-btn {
+            background-color: #ff6fae;
+            color: white;
+        }
+        .no-btn {
+            background-color: #f9b8b8;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Hola! ¿Quieres ser mi San Valentín?</h1>
+    <p>Este San Valentín no sería lo mismo sin ti. 💖</p>
+    <button class="yes-btn" onclick="respuesta(true)">¡Sí, claro!</button>
+    <button class="no-btn" id="no-btn" onclick="moverNo()">Lo siento, no</button>
+
+    <script>
+        function respuesta(respuesta) {
+            if (respuesta) {
+                alert("¡Yay! ¡Gracias! 💕");
+            } else {
+                alert("¡Lo entiendo! 😢");
+            }
+        }
+
+        function moverNo() {
+            const noButton = document.getElementById("no-btn");
+            noButton.style.position = "absolute";
+            noButton.style.top = Math.random() * 400 + "px"; // Cambia aleatoriamente la posición vertical
+            noButton.style.left = Math.random() * 400 + "px"; // Cambia aleatoriamente la posición horizontal
+        }
+    </script>
+</body>
+</html>
